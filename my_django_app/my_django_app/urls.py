@@ -1,5 +1,5 @@
 """
-URL configuration for prometheus_grafana_integration project.
+URL configuration for my_django_app project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,9 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from myapp.metrics import example_view, metrics_view
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("metrics/", include('django_prometheus.urls'))
+    path('admin/', admin.site.urls),
+    path('example/', example_view, name='example_view'),
+    path('metrics/', metrics_view, name='metrics_view')
 ]

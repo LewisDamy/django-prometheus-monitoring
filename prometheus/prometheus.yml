@@ -1,8 +1,0 @@
-global:
-  scrape_interval: 15s
-
-scrape_configs:
-  - job_name: 'django-app'
-    static_configs:
-      - targets: ['django-app:8000']
-  # Add more job configurations as needed.

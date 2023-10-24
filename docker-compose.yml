@@ -2,23 +2,23 @@ version: '3'
 services:
   django-app:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ./my_django_app
     ports:
-      - "8000:8000"
+      - "8080:8080"
+    command: python manage.py runserver 0.0.0.0:8080
+    depends_on:
+      - prometheus
+    networks:
+      - app-network
+
   prometheus:
-    build:
-      context: ./prometheus
-      dockerfile: Dockerfile
+    image: prom/prometheus:v2.33.1
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
-    volumes:
-      - ./prometheus:/etc/prometheus
-  grafana:
-    build:
-      context: ./grafana
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./grafana/provisioning:/etc/grafana/provisioning
+    networks:
+      - app-network
+
+networks:
+  app-network:

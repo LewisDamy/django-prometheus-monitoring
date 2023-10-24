@@ -1,5 +1,5 @@
 """
-WSGI config for prometheus_grafana_integration project.
+WSGI config for my_django_app project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,8 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault(
-    "DJANGO_SETTINGS_MODULE", "prometheus_grafana_integration.settings"
-)
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_django_app.settings')
 
 application = get_wsgi_application()
