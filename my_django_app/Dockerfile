@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.11-alpine
+FROM --platform=linux/amd64 python:3.10-alpine
 
 # Set environment variables for Python
 ENV PYTHONUNBUFFERED 1
@@ -11,6 +11,9 @@ WORKDIR /app
 
 # Copy the requirements file from one level up into the container
 COPY requirements.txt /app/
+
+RUN apk add build-base linux-headers
+RUN python -m pip install psutil
 
 # Install project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
