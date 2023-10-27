@@ -60,7 +60,7 @@ This example demonstrates how to set up monitoring for a Django application usin
     - Django `http:localhost:8080/example`
     ![Django App Example](https://github.com/LewisDamy/django-prometheus-monitoring/blob/main/assets/Django%20App%20Running%20-%Example.png)
     - Django `http:localhost:8080/metrics`
-    ![Django App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Django%20App%20Running%20-%Metrics.png)
+    ![Django App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/blob/main/assets/Django%20App%20Running%20-%Metrics.png)
     - Prometheus `http:localhost:9090/metrics`
     ![Prometheus App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/blob/main/assets/Prometheus%20App%20Running.png)
 
