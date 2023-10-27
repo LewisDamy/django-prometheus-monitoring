@@ -34,9 +34,35 @@ This example demonstrates how to set up monitoring for a Django application usin
      docker run -d -p 3000:3000 --name my-grafana my-grafana
      ```
 
-4. **Access Metrics**:
+4. **Docker Compose**:
+    - Execute all three containers using the `docker-compose.yml`.
+    - Start the server:
+    ```
+    docker-compose build
+    ```
+    - Run the applications:
+    ```
+    docker-compose up
+    ```
+    - Stopping the applications:
+    ```
+    docker-compose down
+    ```
+5. **Access Metrics**:
+   - Access the Django application at `http://localhost:8080/example` or to see the data being send to prometheus at `http://localhost:8080/metrics`.
    - Access the Prometheus metrics at `http://localhost:9090/metrics`.
    - Access Grafana at `http://localhost:3000` and configure it to use Prometheus as the data source. Import the dashboard using the `my-dashboard.json` file.
+
+## Running
+   - Here is a sample of them running:
+    - Grafana `http:locahost:3000/dashboards/prometheus-2-0-stats`
+    ![Grafana Graphics](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Grafana%20%20Running.png)
+    - Django `http:localhost:8080/example`
+    ![Django App Example](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Django%20App%20Running%20-%20Example.png)
+    - Django `http:localhost:8080/metrics`
+    ![Django App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Django%20App%20Running%20-%Metrics.png)
+    - Prometheus `http:localhost:9090/metrics`
+    ![Prometheus App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Prometheus%20App%20Running.png)
 
 ## Troubleshooting
 
