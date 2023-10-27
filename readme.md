@@ -56,13 +56,13 @@ This example demonstrates how to set up monitoring for a Django application usin
 ## Running
    - Here is a sample of them running:
     - Grafana `http:locahost:3000/dashboards/prometheus-2-0-stats`
-    ![Grafana Graphics](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Grafana%20%20Running.png)
+    ![Grafana Graphics](https://github.com/LewisDamy/django-prometheus-monitoring/blob/main/assets/Grafana%20App%20Running.png)
     - Django `http:localhost:8080/example`
-    ![Django App Example](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Django%20App%20Running%20-%20Example.png)
+    ![Django App Example](https://github.com/LewisDamy/django-prometheus-monitoring/blob/main/assets/Django%20App%20Running%20-%Example.png)
     - Django `http:localhost:8080/metrics`
     ![Django App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Django%20App%20Running%20-%Metrics.png)
     - Prometheus `http:localhost:9090/metrics`
-    ![Prometheus App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/assets/Prometheus%20App%20Running.png)
+    ![Prometheus App Metrics](https://github.com/LewisDamy/django-prometheus-monitoring/blob/main/assets/Prometheus%20App%20Running.png)
 
 ## Troubleshooting
 
